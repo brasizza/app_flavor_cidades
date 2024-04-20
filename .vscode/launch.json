@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "SP",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "-t",
+                "lib/main_sp.dart",
+                "--flavor",
+                "SP",
+                "--dart-define-from-file",
+                "config/flutter_define-SP.json",
+                "--release"
+         
+            ],
+        },
+        {
+            "name": "RJ",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "-t",
+                "lib/main_rj.dart",
+                "--flavor",
+                "RJ",
+                "--dart-define-from-file",
+                "config/flutter_define-RJ.json",
+                "--release"
+               
+            ],
+        }
+    ]
+}

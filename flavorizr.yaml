@@ -1,0 +1,11 @@
+flavors:
+  RJ: #Nome do seu flavor
+    app:
+      name: "Guia do Rio de janeiro" #Nome do seu app
+    android: #disposivivo
+      applicationId: "br.com.brasizza.marcus.guia_rj" #Packagename
+  SP: #Nome do seu flavor
+    app:
+      name: "Guia de São Paulo"
+    android:
+      applicationId: "br.com.brasizza.marcus.guia_sp"
