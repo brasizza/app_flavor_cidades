@@ -5,7 +5,7 @@ class LocalModel {
   final int id;
   final String local;
   final String descricao;
-  final String endereco;
+  final String? endereco;
   final String imagem;
   LocalModel({
     required this.id,
@@ -43,10 +43,10 @@ class LocalModel {
 
   factory LocalModel.fromMap(Map<String, dynamic> map) {
     return LocalModel(
-      id: map['codigo'] as int,
+      id: map['id'] as int,
       local: map['local'] as String,
       descricao: map['descricao'] as String,
-      endereco: map['endereco'] as String,
+      endereco: map['endereco'],
       imagem: map['imagem'] as String,
     );
   }

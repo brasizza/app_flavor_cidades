@@ -1,4 +1,4 @@
 {
-    "URL_BACKEND" : "http://192.168.5.52:8080/",
+    "URL_BACKEND" : "https://walrus-app-fu2tc.ondigitalocean.app/api/",
     "CIDADE" : "RJ"
 }

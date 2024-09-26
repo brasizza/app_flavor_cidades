@@ -1,4 +1,3 @@
-import 'package:app_flavor_cidades/flavors.dart';
 import 'package:flutter/material.dart';
 
 class LocalImageRemove extends StatelessWidget {
@@ -14,7 +13,7 @@ class LocalImageRemove extends StatelessWidget {
       child: Image.network(
         width: width,
         fit: BoxFit.contain,
-        "${F.url}$path",
+        path,
         errorBuilder: (context, error, stackTrace) {
           return const SizedBox(
             height: 200,

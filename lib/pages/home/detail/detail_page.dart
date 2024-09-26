@@ -42,7 +42,7 @@ class _DetailPageState extends State<DetailPage> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12.0),
               child: Text(
-                local.endereco,
+                local.endereco!,
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
                 ),

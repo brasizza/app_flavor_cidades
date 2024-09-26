@@ -12,7 +12,7 @@
                 "SP",
                 "--dart-define-from-file",
                 "config/flutter_define-SP.json",
-                "--release"
+            
          
             ],
         },
@@ -27,7 +27,7 @@
                 "RJ",
                 "--dart-define-from-file",
                 "config/flutter_define-RJ.json",
-                "--release"
+              
                
             ],
         }
