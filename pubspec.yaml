@@ -41,6 +41,8 @@ dependencies:
   dio: ^5.4.3+1
   flutter_getit: ^2.0.0
   flutter_bloc: ^8.1.5
+  shorebird_code_push: ^1.1.5
+  restart_app: ^1.2.1
 
 dev_dependencies:
   flutter_test:
@@ -62,6 +64,8 @@ flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
+  #assets:
+
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:

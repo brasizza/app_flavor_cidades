@@ -17,7 +17,7 @@ class HomeCubit extends Cubit<HomeState> {
       final locais = await _service.getLocais();
       emit(HomeLoaded(locais: locais));
     } catch (e) {
-      emit(HomeError(error: 'Falha ao recuperar os dados'));
+      emit(HomeError(error: 'Falha ao recuperar os dados $e'));
     }
   }
 }
