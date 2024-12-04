@@ -41,8 +41,8 @@ dependencies:
   dio: ^5.4.3+1
   flutter_getit: ^2.0.0
   flutter_bloc: ^8.1.5
-  shorebird_code_push: ^1.1.5
   restart_app: ^1.2.1
+  shorebird_code_push: ^2.0.2
 
 dev_dependencies:
   flutter_test:

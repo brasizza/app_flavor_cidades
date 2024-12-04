@@ -74,7 +74,6 @@ class _HomePageState extends State<HomePage> {
             onPressed: () async {
               ScaffoldMessenger.of(context).hideCurrentMaterialBanner();
               await _downloadUpdate();
-
               if (!mounted) return;
               ScaffoldMessenger.of(context).hideCurrentMaterialBanner();
             },
