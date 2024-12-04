@@ -16,17 +16,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final _shorebirdCodePush = ShorebirdCodePush();
+  final _shorebirdCodePush = ShorebirdUpdater();
 
   @override
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((_) async {
-      if (_shorebirdCodePush.isShorebirdAvailable()) {
-        final hasVersion = await _shorebirdCodePush.isNewPatchAvailableForDownload();
-
-        if (hasVersion) {
-          _showUpdateAvailableBanner();
-        }
+      if ((await _shorebirdCodePush.checkForUpdate() == UpdateStatus.outdated)) {
+        _showUpdateAvailableBanner();
       }
     });
 
@@ -125,17 +121,17 @@ class _HomePageState extends State<HomePage> {
     _showDownloadingBanner();
 
     await Future.wait([
-      _shorebirdCodePush.downloadUpdateIfAvailable(),
+      _shorebirdCodePush.update(),
       // Add an artificial delay so the banner has enough time to animate in.
       Future<void>.delayed(const Duration(milliseconds: 250)),
     ]);
 
-    final isUpdateReadyToInstall = await _shorebirdCodePush.isNewPatchReadyToInstall();
+    final isUpdateReadyToInstall = await _shorebirdCodePush.checkForUpdate();
 
     if (!mounted) return;
 
     ScaffoldMessenger.of(context).hideCurrentMaterialBanner();
-    if (isUpdateReadyToInstall) {
+    if (isUpdateReadyToInstall == UpdateStatus.restartRequired) {
       _showRestartBanner();
     } else {
       _showErrorBanner();
